@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:18
+    container_name: tarefas-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-tarefas}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no .env}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - tarefas-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  tarefas-data:
