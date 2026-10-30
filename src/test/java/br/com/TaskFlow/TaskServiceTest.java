@@ -5,7 +5,6 @@ import br.com.TaskFlow.dto.TaskRequest;
 import br.com.TaskFlow.dto.TaskResponse;
 import br.com.TaskFlow.exeption.TaskNotFoundException;
 import br.com.TaskFlow.repository.TaskRepository;
-import br.com.TaskFlow.service.TaskService;
 import br.com.TaskFlow.task.Task;
 import br.com.TaskFlow.task.TaskStatus;
 import org.junit.jupiter.api.Test;

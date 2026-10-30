@@ -1,12 +1,11 @@
 package br.com.TaskFlow.service;
 
 
-
 import br.com.TaskFlow.dto.TaskRequest;
 import br.com.TaskFlow.dto.TaskResponse;
-import br.com.TaskFlow.exeption.TaskNotFoundException;
 import br.com.TaskFlow.repository.TaskRepository;
-import org.springframework.scheduling.config.Task;
+import br.com.TaskFlow.task.Task;
+import br.com.TaskFlow.task.TaskStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

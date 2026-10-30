@@ -1,7 +1,7 @@
 package br.com.TaskFlow.dto;
 
+import br.com.TaskFlow.task.Task;
 import br.com.TaskFlow.task.TaskStatus;
-import org.springframework.scheduling.config.Task;
 
 import java.time.Instant;
 
