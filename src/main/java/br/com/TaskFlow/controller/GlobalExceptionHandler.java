@@ -1,5 +1,6 @@
 package br.com.TaskFlow.controller;
 
+import br.com.TaskFlow.exeption.TaskNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.MethodArgumentNotValidException;
