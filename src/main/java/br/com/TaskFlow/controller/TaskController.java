@@ -1,5 +1,6 @@
 package br.com.TaskFlow.controller;
 
+import br.com.TaskFlow.dto.TaskRequest;
 import br.com.TaskFlow.dto.TaskResponse;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
