@@ -1,4 +1,4 @@
-package br.com.TaskFlow.controller;
+package br.com.TaskFlow.config;
 
 import br.com.TaskFlow.exeption.TaskNotFoundException;
 import org.springframework.http.HttpStatus;
