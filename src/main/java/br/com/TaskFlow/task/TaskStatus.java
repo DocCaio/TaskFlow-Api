@@ -1,4 +1,4 @@
-package br.com.TaskFlow;
+package br.com.TaskFlow.task;
 
 public enum TaskStatus {
     TODO,

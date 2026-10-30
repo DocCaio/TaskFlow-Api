@@ -1,6 +1,6 @@
 package br.com.TaskFlow.dto;
 
-import br.com.TaskFlow.TaskStatus;
+import br.com.TaskFlow.task.TaskStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
