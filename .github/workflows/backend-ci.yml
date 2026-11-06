@@ -4,18 +4,15 @@ on:
   push:
     branches: [main]
     paths:
-      - "backend/**"
+      - "**.java"
+      - "pom.xml"
       - ".github/workflows/backend-ci.yml"
   pull_request:
     paths:
-      - "backend/**"
+      - "pom.xml"
 
 permissions:
   contents: read
-
-defaults:
-  run:
-    working-directory: backend
 
 jobs:
   build:
@@ -85,7 +82,7 @@ jobs:
 
       - uses: docker/build-push-action@v6
         with:
-          context: backend
+          context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
