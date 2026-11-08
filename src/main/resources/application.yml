@@ -1,3 +1,6 @@
+server:
+  port: ${PORT:8080}
+
 spring:
   application:
     name: TaskFlow
@@ -24,8 +27,8 @@ app:
   cors:
     allowed-origins: http://localhost:3000,http://localhost:5173
 
-  scalar:
-    path: /api/docs
-    dark-mode: true
-    theme: bluePlanet
-    page-title: Task API
+scalar:
+  path: /api/docs
+  dark-mode: true
+  theme: bluePlanet
+  page-title: Task API
