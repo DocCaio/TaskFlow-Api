@@ -2,8 +2,10 @@ spring:
   application:
     name: TaskFlow
 
-  datasource:
-    url: jdbc:postgresql://localhost:5433/${POSTGRES_DB:tarefas}
+  spring:
+
+    datasource:
+      url: ${DB_URL:jdbc:postgresql://localhost:5433/tarefas}
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD}
 
