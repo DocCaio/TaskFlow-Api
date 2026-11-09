@@ -6,7 +6,7 @@ spring:
     name: TaskFlow
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/${POSTGRES_DB:tarefas}
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5433/${POSTGRES_DB:tarefas}}
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD}
 
