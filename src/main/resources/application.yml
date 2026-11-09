@@ -1,13 +1,9 @@
-server:
-  port: ${PORT:8080}
-
 spring:
   application:
     name: TaskFlow
 
   datasource:
-
-    url: ${SPRING_DATASOURCE_URL:${DATABASE_URL:jdbc:postgresql://localhost:5433/${POSTGRES_DB:tarefas}}}
+    url: jdbc:postgresql://localhost:5433/${POSTGRES_DB:tarefas}
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD}
 
@@ -28,8 +24,8 @@ app:
   cors:
     allowed-origins: http://localhost:3000,http://localhost:5173
 
-scalar:
-  path: /api/docs
-  dark-mode: true
-  theme: bluePlanet
-  page-title: Task API
+  scalar:
+    path: /api/docs
+    dark-mode: true
+    theme: bluePlanet
+    page-title: Task API
