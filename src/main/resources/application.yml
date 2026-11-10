@@ -1,3 +1,5 @@
+server:
+  port: ${PORT:8080}
 
 spring:
   application:
@@ -8,6 +10,8 @@ spring:
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_PASSWORD:postgres}
     driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:10}
 
   jpa:
     hibernate:
@@ -24,9 +28,7 @@ spring:
 
 app:
   cors:
-    allowed-origins:
-      - http://localhost:3000
-      - http://localhost:5173
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000,http://localhost:5173}
 
   scalar:
     path: /api/docs
